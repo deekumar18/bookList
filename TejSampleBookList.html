@@ -1,0 +1,57 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" media="all" href="style.css">
+</head>
+
+<body>
+    <h1>My Sample Page</h1>
+
+    <ul class="pagiNation clearFix">
+        <li id="dyn_nav" class="textLeft">
+            <span id="dyn_nav_col">
+                <dl id="attr_1" class="dn-attr searchFilterSection">
+                    <dt class="dn-attr-hdr">
+                        <div class="left lblAlign">Include:</div>
+                    </dt>
+                    <dt class="searchFilterComponent">
+                        <input type="checkbox" value="action" checked="" id="Books" name="genre" onclick="filterSearchResult(this)">
+                        <label for="Books" class="right lblAlign">Books</label>
+                        <a class="dn-attr-v" href="/webapp/wcs/stores/servlet/ProductSearchCommand?storeId=10052&amp;langId=-1&amp;displayImage=N&amp;catalogId=10002&amp;extSearchEnabled=G&amp;search=Mechanics+inmeta:PRODUCTTYPE%3DTB&amp;dnavs=inmeta:PRODUCTTYPE%3DTB"
+                            id="linkForBooks" style="display:none" ctype="dynnav.Filter.TB" title="TB"></a>
+                    </dt>
+                    <dt class="searchFilterComponent">
+                        <input type="checkbox" value="action" id="Merchandise" name="genre" onclick="filterSearchResult(this)">
+                        <label for="Merchandise" class="right lblAlign">Merchandise</label>
+                        <a class="dn-attr-v" href="/webapp/wcs/stores/servlet/ProductSearchCommand?storeId=10052&amp;langId=-1&amp;displayImage=N&amp;catalogId=10002&amp;extSearchEnabled=G&amp;search=Mechanics+inmeta:PRODUCTTYPE%3DGM&amp;dnavs=inmeta:PRODUCTTYPE%3DGM"
+                            id="linkForMerchandise" style="display:none" ctype="dynnav.Dept.GM" title="GM"></a>
+                    </dt>
+                </dl>
+            </span>
+        </li>
+        <a href="/webapp/wcs/stores/servlet/ProductSearchCommand?storeId=10052&amp;langId=-1&amp;displayImage=N&amp;catalogId=10002&amp;extSearchEnabled=G&amp;search=Mechanics&amp;start=0"
+            style="display:none" id="filterAnchor"></a>
+
+        <!-- <li class="textRight ">
+                      <label>DISPLAYING 8 of 11 ITEMS  | </label>
+                      <span class="i">1</span>
+                      <a href="/webapp/wcs/stores/servlet/ProductSearchCommand?storeId=10052&amp;langId=-1&amp;displayImage=N&amp;catalogId=10002&amp;extSearchEnabled=G&amp;search=Mechanics&amp;start=8">2</a>
+                      <a href="/webapp/wcs/stores/servlet/ProductSearchCommand?storeId=10052&amp;langId=-1&amp;displayImage=N&amp;catalogId=10002&amp;extSearchEnabled=G&amp;search=Mechanics&amp;start=8" alt="Next">&gt;&gt;</a>
+                </li>   -->
+        <li id="pagination" class="textRight "></li>
+
+    </ul>
+    <div class="main-content">
+        <ul id="foo" class="searchResultList clearfix"></ul>
+        </ul>
+    </div>
+    <script language="javascript" src="http://code.jquery.com/jquery-1.4.2.min.js"></script>
+    <script src="imgRepo.js"></script>
+    <script src="pagination.js"></script>
+</body>
+
+</html>
